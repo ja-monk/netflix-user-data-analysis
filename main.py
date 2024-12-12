@@ -22,7 +22,7 @@ def main():
     # categorise
     user_show_df = src.data_analysis.categorise_days_hours(user_show_df)
 
-    print(user_show_df.head)
+    src.data_analysis.chart_data(user_show_df)
 
     return 0
 
