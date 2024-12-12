@@ -19,6 +19,9 @@ def main():
     # filter user data to get only data for given title for that user
     user_show_df = src.data_analysis.filter_df_column_contains_string(user_df, 'Title', title)
 
+    # categorise
+    user_show_df = src.data_analysis.categorise_days_hours(user_show_df)
+
     print(user_show_df.head)
 
     return 0

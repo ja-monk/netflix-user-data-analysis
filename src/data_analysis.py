@@ -51,3 +51,11 @@ def filter_df_column_contains_string(df, column, string):
     filtered_df = df[df[column].str.contains(string, case=False)]
     return filtered_df
 
+def categorise_days_hours(user_show_df):
+    weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    user_show_df.loc[:, 'weekday'] = pd.Categorical(user_show_df['weekday'], categories=weekdays, ordered=True)
+
+    hours = np.arange(0, 24, 1).tolist()
+    user_show_df.loc[:, 'hour'] = pd.Categorical(user_show_df['hour'], categories=hours, ordered=True)
+
+    return user_show_df
