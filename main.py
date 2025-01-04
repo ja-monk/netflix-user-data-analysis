@@ -22,6 +22,7 @@ def main():
     # categorise
     user_show_df = src.data_analysis.categorise_days_hours(user_show_df)
 
+    print("Outputting chart for User: '" + user + "' & Title: '" + title + "' to output/plot.png")
     src.data_analysis.chart_data(user_show_df)
 
     return 0
