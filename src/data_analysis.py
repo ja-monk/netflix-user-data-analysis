@@ -90,4 +90,4 @@ def chart_data(user_show_df):
     ax2.set_title('Hours of Day Watched')
 
     plt.tight_layout()
-    plt.savefig('output/plot.png')
+    plt.savefig('output/viewing_plot.png')
